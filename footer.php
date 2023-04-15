@@ -17,21 +17,14 @@
 </html>
 
 <script>
+
+
+// ======================= USUN INFO PO LOGOWANIU ==============================
 $(document).on("click", '.btn-close', function() {
 	$('.orange').remove();
 });
 
-$(document).ready(function(){
-	$('#dropDown').click(function(event){
-		$('.drop-down').toggleClass('drop-down--active');
-		event.stopPropagation();
-	});
-	$(document).click(function(event) {
-		if (!$(event.target).hasClass('drop-down--active')) {
-			$(".drop-down").removeClass("drop-down--active");
-		}
-	});
-});
+
 
 	var pathname = window.location.pathname; // Returns path only (/path/example.html)
 	var url      = window.location.href;     // Returns full URL (https://example.com/path/example.html)

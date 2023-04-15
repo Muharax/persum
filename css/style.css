@@ -1,6 +1,15 @@
 #prv_main_link{
 	display:none;
 }
+*{
+    font-family: monospace;
+    color:white;
+}
+
+* > div > button{
+    color:black;
+	width:100%;
+}
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
@@ -31,7 +40,115 @@ input[type=number]::-webkit-outer-spin-button {
 textarea:focus, input:focus{
     outline: none;
 }
-
+#SignOut{
+	color:black;
+}
+.root{
+	background-color: #192930;
+    padding: 10px;
+    border-radius: 5px;
+	width: 100%;
+}
+.sg-info{
+	background-color: #111d22;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.onas{
+	display:flex;
+}
+.onas-info{
+	padding: 5px;
+    background-color: #111d22;
+    border-radius: 5px;
+    margin: 10px;
+	text-align:center;
+}
+.godziny-pracy{
+	text-align: center;
+}
+.gdzie-nas-znalezc{
+	margin: 10px;
+    padding: 5px;
+}
+/* ========================== GAME.PHP ============================= */
+.buildings-options-btn{
+	text-align: right;
+}
+.buildings-options{
+	/* border-top: 1px solid white; */
+	text-align:left;
+}
+.buildings-site{
+	text-align: center;
+}
+.buildings-main-card{
+	background-color: #213740;
+    border: 1px solid #00f5ff;
+    width: 150px;
+    display: inline-block;
+}
+/* .buildings-main-card:hover{ */
+	/* scale:1.1; */
+/* } */
+.buildings-main{
+    border: 1px solid black;
+	height:inherit;
+}
+.buildings-img{
+    max-width: 100%;
+    max-height: 100%;
+	width: 150px;
+    height: 120px;
+    object-fit: cover;
+}
+.buildings-name{
+	min-height: 50px;
+    color:white;
+    text-align: center;
+	font-weight: 900;
+}
+.pasek-2{
+    display: flex;
+    flex-direction: row;
+    background-color: #192930;
+    padding: 7px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    align-items: center;
+}
+.pasek-2-wartosc{
+	background-color: #111d22;
+    border-radius: 5px;
+    padding: 5px;
+}
+.pasek-2 > div {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.twoje_miasto_css{
+	display: flex;
+    flex-direction: row;
+}
+.m1{
+	display: flex;
+    flex-direction: column;
+}
+.m2{
+	display: flex;
+    flex-direction: row;
+}
+.main_menu{
+	min-width: 24%;
+	background-color: #111d22;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.godziny-pracy{
+	width:300px;
+}
 /* ============================================================== */
 ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-track {
     border: 0!important;
