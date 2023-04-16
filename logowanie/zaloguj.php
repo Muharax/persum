@@ -23,6 +23,7 @@
 								session_start();
 								$token = htmlentities($_POST['token']);
 								if($token === $_SESSION['token']){
+
 									$_SESSION['zalogowany'] 	= true;
 									$_SESSION['ready'] 			= "ready";
 									$_SESSION['id'] 			= $wiersz['id'];
@@ -40,6 +41,8 @@
 									$zadanie->bindParam(':user', $user, PDO::PARAM_STR);
 									$zadanie->execute();
 									$totalTime = microtime(true) - $startTime;
+
+
 									// $_SESSION['alert'] = '<div class="orange">'.$totalTime.'</div>';
 									$alert = 'Witaj '.$_SESSION['imie'];
 									alert($alert,1);

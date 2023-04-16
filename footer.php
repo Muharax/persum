@@ -20,6 +20,8 @@
 
 
 // ======================= USUN INFO PO LOGOWANIU ==============================
+
+	
 $(document).on("click", '.btn-close', function() {
 	$('.orange').remove();
 });

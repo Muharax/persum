@@ -4,16 +4,9 @@
 	require ('logo.php');
 ?>
 <div class="container">
-	<?php 
-	
-	// if(isset($_SESSION['zalogowany'])){
+	<?php
 		include('game.php');
-	// }else{
-		// echo 'Zaloguj się';
-	// }
-	
 	?>
-	
 </div>
 
 <?php

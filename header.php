@@ -50,6 +50,33 @@
 <body>
 <script>
 
+
+	
+	
+$(document).on("click", '#add_T', function() {	
+	var id = $(this).val();
+	var token = $('#token-k').val();
+	// console.log(id);
+	// console.log(token);
+
+		$.ajax({
+			type: "POST",
+			url: "game/core/dodaj-do-koszyka.php",
+			data: {"id":id, "token":token},
+			dataType:'text',
+			success: function(msg){
+				// $(".pasek-2-zalogujsie").html(msg);
+				console.log(msg);
+				
+			},
+		});
+	
+});
+
+
+
+
+
 $(document).ready(function(){
 	$('#dropDown').click(function(event){
 		$('.drop-down').toggleClass('drop-down--active');

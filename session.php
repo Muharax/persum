@@ -1,6 +1,6 @@
 <?php
 include('init.php');
-
+// session_start();
 
 defined('URL') or define('URL', $http.'://'.$_SERVER['SERVER_NAME']. "/$page_name/");
 
@@ -8,7 +8,7 @@ defined('URL') or define('URL', $http.'://'.$_SERVER['SERVER_NAME']. "/$page_nam
 		$L777 					= md5(microtime(true).mt_Rand());
 		$_SESSION['token'] 		= password_hash($L777, PASSWORD_DEFAULT);
 	}else{
-		// session_start();
+		session_start();
 		// header('Location: '.URL.'index.php');
 	}
 

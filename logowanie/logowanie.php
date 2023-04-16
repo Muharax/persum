@@ -3,18 +3,23 @@
 include ('../init.php');
 defined('URL') or define('URL', $http.'://'.$_SERVER['SERVER_NAME']. "/$page_name/");
 
-	// session_start();
-	// if(isset($_SESSION['zalogowany']) && $_SESSION['zalogowany'] === true){
-		// header('Location: '.URL.'index.php');
-	// }
+	if(isset($_SESSION['zalogowany']) && $_SESSION['zalogowany'] === true){
+		
+	}else{
+		session_start();
+		$L777 					= md5(microtime(true).mt_Rand());
+		$_SESSION['token'] 		= password_hash($L777, PASSWORD_DEFAULT);
+	}
+	
 	include('../header.php');
 	include('../logo.php');
 	
 	if(isset($_SESSION['alert'])) echo $_SESSION['alert']; 
 		unset($_SESSION['alert']);
 	
-	$L777 					= md5(microtime(true).mt_Rand());
-	$_SESSION['token'] 		= password_hash($L777, PASSWORD_DEFAULT);
+	
+	
+	
 	
 ?>
 <div id="formularz-logowania">
@@ -40,16 +45,14 @@ defined('URL') or define('URL', $http.'://'.$_SERVER['SERVER_NAME']. "/$page_nam
 					<button type="submit" class="log-in" id="sub">Sign In</button>
 				</div>
 			</div>
-	
-	
-	
-	
-	
-				
 			</div>
 		</div>
 	</form>
 </div>
+
+<div class="reg"><a href="<?php echo URL;?>logowanie/rejestracja.php">Rejestracja</a></div>
+
+
 	
 <?php require('../footer.php');?>
 
