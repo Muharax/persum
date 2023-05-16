@@ -1,35 +1,10 @@
 <?php 
 
-	class koszyk {
-		
-	}
-// if(!isset($_SESSION['zalogowany'])){
-	// echo 'Brak dostępu';
-	// exit;
-// }
-// session_start();
-function kasa(){
-	require_once ('database/db.php');
-	$zadanie = $db_PDO->prepare('SELECT * FROM `zamowienia` WHERE `id_user`=:id LIMIT 1');
-	$zadanie->execute([ ':id' => $_SESSION['id']]);
-	$ile = $zadanie->rowCount();
-	if($ile > 0){
-		$wiersz = $zadanie->fetch();
-		return $wiersz['gold'].' PLN';
-	}else{
-		return "0 PLN";
-	}
-}
-
-
-
-
-
 function zalogowany(){
 	if(isset($_SESSION['zalogowany'])){
 return '<div class="m1">
 		<div class="pasek-2">
-			<div class="pasek-2-name">Saldo </div><div class="pasek-2-wartosc">'.kasa().'</div>
+			<div class="pasek-2-name">Saldo </div><div class="pasek-2-wartosc"></div>
 			<div class="pasek-2-koszyk" style="margin-left:10px;"><a href="?link=koszyk">Koszyk</a></div>
 		</div>
 	</div>';
@@ -37,18 +12,12 @@ return '<div class="m1">
 	}else{
 		return '<div class="m1">
 		<div class="pasek-2">
-			<div class="pasek-2-zalogujsie" style="margin-left:10px;"><a href="'.URL.'logowanie/logowanie.php">Zaloguj się aby żłożyć zamówienie</a></div>
+			<div class="pasek-2-zalogujsie" style="margin-left:10px;"><a href="'.URL.'logowanie/logowanie.php">Zaloguj się aby przeglądać bez ograniczeń</a></div>
 		</div>
 	</div>';
 		exit;
 	}
 }
-
-
-
-
-
-
 ?>
 
 <div class="main">
@@ -58,17 +27,17 @@ return '<div class="m1">
 	<div class="m2">
 
 		<div class="main_menu">
-			<div><a class="mma" href='?link=strona-glowna'>Strona Głowna</a></div>
+			<div><a class="mma" href='?link=home'>Home</a></div>
 			<hr>
-			<div><a class="mma" href='?link=kebab'>Kebab</a></div>
-			<div><a class="mma" href='?link=sniadania'>Śniadania</a></div>
-			<div><a class="mma" href='?link=obiady'>Obiady</a></div>
+			<div><a class="mma" href='?link=wiadomosci'>Wiadomości</a></div>
+			<div><a class="mma" href='?link=memy'>Memy</a></div>
+			<div><a class="mma" href='?link=kanaly'>Kanały</a></div>
 			<hr>
-			<div><a class="mma" href='?link=sklep'>Sklep</a></div>
+			<div><a class="mma" href='?link=poczekalnia'>Poczekalnia</a></div>
 			<hr>
 			
-			<div><a class="mma" href='?link=stworz-wlasnego-kebaba'>Stwórz własnego Kebaba <i style="color:red;">Nowość</i></a></div>
-			<div><a class="mma" href='?link=katering'>Katering</a></div>
+			<div><a class="mma" href='?link=stworz-wlasnego-kebaba'> Dodaj matriał <i style="color:red;">Nowość</i></a></div>
+			<div><a class="mma" href='?link=katering'>Opinia</a></div>
 			<hr>
 			<div><a class="mma" href='?link=o-nas'>o Nas</a></div>
 		</div>
@@ -79,7 +48,7 @@ return '<div class="m1">
 						
 				
 				if(!isset($_GET['link'])){
-					include ('game/menu/strona-glowna.php');
+					include ('game/menu/home.php');
 					exit;
 				}
 				
@@ -99,6 +68,7 @@ return '<div class="m1">
 				
 				}else{
 					echo 'Zgubiłeś się?';
+					exit;
 				}
 						
 	?>	

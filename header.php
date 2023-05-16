@@ -1,8 +1,5 @@
-<?php
-	  
+<?php  
 	include ('init.php');
-	error_reporting(E_ALL);
-	defined('URL') or define('URL', $http.'://'.$_SERVER['SERVER_NAME']. "/$page_name/");
 ?>
 	
 <!DOCTYPE HTML>
@@ -41,18 +38,18 @@
 	
 	<link rel="stylesheet" type="text/css" href="<?php echo URL;?>js/bootstrap/bootstrap.css">
 	<script type="text/javascript" src="<?php echo URL;?>js/bootstrap/bootstrap.js"></script>
-		 			
+	
+
+	
 	<title>Persum</title>
 			 			
 </head>
 
 
 <body>
+
 <script>
 
-
-	
-	
 $(document).on("click", '#add_T', function() {	
 	var id = $(this).val();
 	var token = $('#token-k').val();

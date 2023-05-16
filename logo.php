@@ -1,89 +1,125 @@
 <header class="logo-out">
-
-		<div class="logo-w1 p-2">
-			<a id="baseindex" href="<?php echo URL;?>index.php">
-				<img id="BHH" src="<?php echo URL;?>img/skynet1.png">
-				<!-- <img width="50px" height="40px" src="/al/img/mm.png"> -->
-			</a>
-		</div>
-		
-		
-		
-		
-		
-	<nav class="mobile-menu">
+	<div class="logo-w1 p-2">
+		<a id="baseindex" href="<?php echo URL;?>index.php">
+			<img id="BHH" src="<?php echo URL;?>img/skynet1.png">
+		</a>
+	</div>	
+<!-- ====================================================================== -->	
+<nav class="mobile-menu">
 	<label for="show-menu" class="show-menu">
-	<img src="<?php echo URL;?>img/favicon.png" class="S-Skynet">
+		<img src="<?php echo URL;?>img/favicon.png" class="S-Skynet">
 	</label>
 	
 	<input type="checkbox" id="show-menu">
-		<ul id="menu">
-		<li><div class="social-media-in">
-					<a href="https://twitter.com/n_buchaj" target="_blank">
-						<img src="<?php echo URL;?>img/social-media/twitter.png" class="socialmedia-hover" title="Twitter">
-					</a>
-			</div></li>
+	<ul id="menu">
 		<li>
-		
-		<div class="social-media-in">
-				<a href="mailto:adriangajda88@gmail.com">
-					<img src="<?php echo URL;?>img/social-media/email.png" class="socialmedia-hover" title="E-mail">
-				</a>
-			</div>	
-
-		</li>
-		<li>	
-		
-		<div class="social-media-in">
-				<a href="https://github.com/Muharax" target="_blank">
-					<img src="<?php echo URL;?>img/social-media/github2.png" class="socialmedia-hover" title="Github">
-				</a>
-		</div>	
-		
-		</li>
-		<li>
-		
-		<div class="social-media-in">
-				<a href="https://www.pexels.com/pl-pl/@aleksander-depre-296478516/" target="_blank">
-					<img src="<?php echo URL;?>img/social-media/pixel.png" class="socialmedia-hover" title="Pixels">
+			<div class="social-media-in">
+				<a href="https://twitter.com/n_buchaj" target="_blank">
+					<img src="<?php echo URL;?>img/social-media/twitter.png" class="socialmedia-hover" title="Twitter">
 				</a>
 			</div>
-			
 		</li>
 		<li>
-		
 		<div class="social-media-in">
+			<a href="mailto:adriangajda88@gmail.com">
+				<img src="<?php echo URL;?>img/social-media/email.png" class="socialmedia-hover" title="E-mail">
+			</a>
+		</div>	
+		</li>
+		<li>
+		<div class="social-media-in">
+			<a href="https://github.com/Muharax" target="_blank">
+				<img src="<?php echo URL;?>img/social-media/github2.png" class="socialmedia-hover" title="Github">
+			</a>
+		</div>	
+		</li>
+		<li>
+		<div class="social-media-in">
+			<a href="https://www.pexels.com/pl-pl/@aleksander-depre-296478516/" target="_blank">
+				<img src="<?php echo URL;?>img/social-media/pixel.png" class="socialmedia-hover" title="Pixels">
+			</a>
+		</div>	
+		</li>
+		<li>
+			<div class="social-media-in">
 				<a href="https://sprzedajemy.pl/oferty-uzytkownika-8743210" target="_blank">
 					<img src="<?php echo URL;?>img/social-media/sell.png" class="socialmedia-hover"  title="Sprzedajemy.pl">
 				</a>
-			
-			
-		</div></li>
+			</div>
+		</li>
 	</ul>
 </nav>
 
 
+<!-- ====================================================================== -->
+<label class="switch">
+	<span class="modeMode">Dark</span>
+	<input type="checkbox" id="mode">
+	<span class="slider round"></span>
+</label>
+<!-- ====================================================================== -->
+<script>
+	// localStorage.setItem("mode", "darkMode");
+	
+	let mode = localStorage.getItem("mode");
+	let cBox = localStorage.getItem("cBox");
+	
+	console.log(mode);
+	
+	
+	if (localStorage.getItem("mode") === null) {
+		localStorage.setItem("mode", "darkMode");
+	}
+
+	console.log(mode);
+	
+	if(localStorage.getItem("mode") === 'darkMode'){
+		$('#mode').prop('checked', true);
+		$('body').removeClass('whiteMode');
+		$('body').addClass('darkMode');
+		$('.root').addClass('rootDark');
+	}else{
+		$('#mode').prop('checked', false);
+		$('body').removeClass('darkMode');
+		$('body').addClass('whiteMode');
+		$('.root').addClass('rootWhite');
+		
+	}
+	
+	
 
 	
-		
-		
-
+	checkBox = document.getElementById('mode').addEventListener('click', event => {
+	if(event.target.checked) {
+		console.log("Zaznaczono");
+		$('body').removeClass('whiteMode');
+		$('body').addClass('darkMode');
+		$('.root').addClass('rootDark');
+		localStorage.removeItem("mode");
+		localStorage.setItem("mode", "darkMode");
+	}else{
+		console.log("Odznaczono");
+		$('body').removeClass('darkMode');
+		$('body').addClass('whiteMode');
+		$('.root').addClass('rootWhite');
+		localStorage.removeItem("mode");
+		localStorage.setItem("mode", "whiteMode");
+	}
+	});
+</script>
 <?php
-// isset($_SESSION) ?: session_start();
-
 	if(isset($_SESSION['zalogowany'])){
 		
 	include('init.php');
-	defined('URL') or define('URL', $http.'://'.$_SERVER['SERVER_NAME']. "/$page_name/");
 	
-		echo '<div id="dane">
-				<div class="table_center">
-					<div class="drop-down">
-						<div id="dropDown" class="drop-down__button">
-							<span class="drop-down__name">'.$_SESSION['imie'].' '.$_SESSION['nazwisko'].'</span>
-						</div>
-						<div class="drop-down__menu-box">
-							<ul class="drop-down__menu">';
+	echo '<div id="dane">
+			<div class="table_center">
+				<div class="drop-down">
+					<div id="dropDown" class="drop-down__button">
+						<span class="drop-down__name">'.$_SESSION['imie'].' '.$_SESSION['nazwisko'].'</span>
+					</div>
+					<div class="drop-down__menu-box">
+						<ul class="drop-down__menu">';
 										
 						if($_SESSION['uprawnienia'] === 1 ){
 							echo '<li data-name="dashboard" class="drop-down__item">
@@ -121,12 +157,5 @@
 	
 	}
 ?>
-
-	
-
-</header>
-
-
-					
-			
+</header>			
 </div>
