@@ -27,6 +27,3 @@ if(array_key_exists('oso',$_GET)){
 
 ?>
 </div>
-<script>
-	
-</script>

@@ -71,8 +71,8 @@ textarea:focus, input:focus{
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 50px;
+  height: 24px;
 }
 
 /* Hide default HTML checkbox */
@@ -98,8 +98,8 @@ textarea:focus, input:focus{
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 16px;
+  width: 16px;
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -108,7 +108,7 @@ textarea:focus, input:focus{
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #213740;
 }
 
 input:focus + .slider {
@@ -148,6 +148,9 @@ input:checked + .slider:before {
 .wiadomosciMain{
     display: flex;
     justify-content: space-around;
+    background-color: #192930;
+    padding: 10px;
+    border-radius: 5px;
 }
 .eLoader{
     background-color: #111d22;
@@ -211,9 +214,12 @@ input:checked + .slider:before {
 }
 .root{
 	/* background-color: #192930; */
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 5px;
 	width: 100%;
+}
+.centerRoot{
+	display:flex;
 }
 .sg-info{
 	background-color: #111d22;
@@ -301,8 +307,7 @@ input:checked + .slider:before {
     flex-direction: column;
 }
 .m2{
-	display: flex;
-    flex-direction: row;
+	min-width:25%;
 }
 .main_menu{
 	min-width: 24%;

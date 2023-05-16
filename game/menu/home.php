@@ -3,7 +3,9 @@
 
     <p>Zostań z nami na dłużej</p>
 </div>
+
 <hr>
+
 <div class="sg-info">
     <h1>Hello World!</h1>
     <p>Welcone on New Web site about world system panitirnto</p>
@@ -14,4 +16,16 @@
     <marquee style="color:yellow;">Site unser construction</marquee>
 
     <p>Dodano <?php echo date('l');?></p>
+	
 </div>
+
+
+
+	<?php
+// $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+// $txt = "John Doe\n";
+// fwrite($myfile, $txt);
+// $txt = "Jane Doe\n";
+// fwrite($myfile, $txt);
+// fclose($myfile);
+?>

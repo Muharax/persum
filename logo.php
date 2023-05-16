@@ -77,12 +77,12 @@
 		$('#mode').prop('checked', true);
 		$('body').removeClass('whiteMode');
 		$('body').addClass('darkMode');
-		$('.root').addClass('rootDark');
+		// $('.root').addClass('rootDark');
 	}else{
 		$('#mode').prop('checked', false);
 		$('body').removeClass('darkMode');
 		$('body').addClass('whiteMode');
-		$('.root').addClass('rootWhite');
+		// $('.root').addClass('rootWhite');
 		
 	}
 	
@@ -94,14 +94,14 @@
 		console.log("Zaznaczono");
 		$('body').removeClass('whiteMode');
 		$('body').addClass('darkMode');
-		$('.root').addClass('rootDark');
+		// $('.root').addClass('rootDark');
 		localStorage.removeItem("mode");
 		localStorage.setItem("mode", "darkMode");
 	}else{
 		console.log("Odznaczono");
 		$('body').removeClass('darkMode');
 		$('body').addClass('whiteMode');
-		$('.root').addClass('rootWhite');
+		// $('.root').addClass('rootWhite');
 		localStorage.removeItem("mode");
 		localStorage.setItem("mode", "whiteMode");
 	}
@@ -125,8 +125,16 @@
 							echo '<li data-name="dashboard" class="drop-down__item">
 									<a href="'.URL.'admin/admin.php">Administracja</a>
 								</li>
+								
+								<li data-name="dashboard" class="drop-down__item">
+									<a href="'.URL.'user/profil.php">Twój profil</a>
+								</li>
 									 
 								<li data-name="dashboard" class="drop-down__item">
+									<a href="'.URL.'test/test.php" target="_blank">TEST</a>
+								</li>';
+						}else{
+							echo '<li data-name="dashboard" class="drop-down__item">
 									<a href="'.URL.'test/test.php" target="_blank">TEST</a>
 								</li>';
 						}
