@@ -46,28 +46,30 @@ return '<div class="m1">
 		<div class="root">
 		<?php 
 							
-					
-					if(!isset($_GET['link'])){
-						include ('game/menu/home.php');
+		function ABC (){
+			if(!isset($_GET['link'])){
+				include ('game/menu/home.php');
+			}else{
+				if(array_key_exists('link',$_GET)){
+					$module = $_GET ['link'];
+					$moduleDIR = 'game/menu/'.$module . '.php';
+					if(!file_exists($moduleDIR)){
+						return 'Nie kombinuj';					
 					}
-					
-					if(array_key_exists('link',$_GET)){
-						$module = $_GET ['link'];
-						$moduleDIR = 'game/menu/'.$module . '.php';
-						if(!file_exists($moduleDIR)){
-							echo 'Nie kombinuj';
-						}
 
-						switch($module){
-							case "$module":
-								include_once($moduleDIR);
-							break;
-						}
-					
-					}else{
-						echo 'Zgubiłeś się?';
+					switch($module){
+						case "$module":
+							include_once($moduleDIR);
+						break;
 					}
-							
+		
+				}else{
+					return 'Zgubiłeś się?';
+				}
+			}
+		}
+		
+		echo ABC();	
 		?>	
 		</div>
 	</div>	

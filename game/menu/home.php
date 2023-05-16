@@ -4,7 +4,7 @@
     <p>Zostań z nami na dłużej</p>
 </div>
 
-<hr>
+<hr />
 
 <div class="sg-info">
     <h1>Hello World!</h1>
@@ -20,12 +20,3 @@
 </div>
 
 
-
-	<?php
-// $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
-// $txt = "John Doe\n";
-// fwrite($myfile, $txt);
-// $txt = "Jane Doe\n";
-// fwrite($myfile, $txt);
-// fclose($myfile);
-?>
