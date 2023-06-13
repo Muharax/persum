@@ -1,31 +1,16 @@
+<?php 
 
 
-				<input type="text" id="login">
+	include ('../database/db.php');
 
-				<input type="password" id="pass">
+	$log = 'nowe_haslo';
+	$user = 'test';
 
-				<button type="button" id="sign">Sign In</button>
-				
-				<div id="info">
+	$zadanie = $db_PDO->prepare('UPDATE `Uzytkownicy` SET `haslo`= :haslo  WHERE `nazwa_uzytkownika` = :user');
+	$zadanie->bindParam(':haslo', $log, PDO::PARAM_STR);
+	$zadanie->bindParam(':user', $user, PDO::PARAM_STR);
+	$zadanie->execute();
 
-	
-	
-				
-			</div>
-		</div>
-	</form>
-</div>
-	
-<?php require('../footer.php');?>
 
-<script>
-	function validate_user(login){
-		let x = document.querySelector(login).value;
-		console.log(x);
-	}
-	
-	validate_user('#login');
-	
-	let x = document.querySelector('#login').value;
-	console.log(x);
-</script>
+
+?>

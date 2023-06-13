@@ -29,14 +29,15 @@ return '<div class="m1">
 			<div class="main_menu">
 				<div><a class="mma" href='?link=home'>Home</a></div>
 				<hr>
-				<div><a class="mma" href='?link=wiadomosci'>Wiadomości</a></div>
-				<div><a class="mma" href='?link=memy'>Memy</a></div>
+				<div><a class="mma" href='?link=odebrane'>Wiadomości</a></div>
+				<div><a class="mma" href='?link=memy'>Nowośći w branży</a></div>
 				<div><a class="mma" href='?link=kanaly'>Kanały</a></div>
+				<div><a class="mma" href='?link=hit'>Hity</a></div>
 				<hr>
 				<div><a class="mma" href='?link=poczekalnia'>Poczekalnia</a></div>
 				<hr>
 				
-				<div><a class="mma" href='?link=stworz-wlasnego-kebaba'> Dodaj matriał <i style="color:red;">Nowość</i></a></div>
+				<div><a class="mma" href='?link=dodaj_material'> Dodaj matriał <i style="color:red;">Nowość</i></a></div>
 				<div><a class="mma" href='?link=katering'>Opinia</a></div>
 				<hr>
 				<div><a class="mma" href='?link=o-nas'>o Nas</a></div>

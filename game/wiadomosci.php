@@ -1,11 +1,8 @@
 <div class="wiadomosciMain">
-	<a href="?link=wiadomosci&oso=polska">Polska</a>
-	<a href="?link=wiadomosci&oso=swiat">Świat</a>
-	<a href="#">Lokalne</a>
-	<a href="#">Biznes</a>
-	<a href="#">Nauka</a>
-	<a href="#">Rozrywka</a>
-	<a href="#">Sport</a>
+	<a href="?link=wiadomosci&oso=odebrane">Odebrane</a>
+	<a href="?link=wiadomosci&oso=swiat">Wysłane</a>
+	<a href="#">Kopie robocze</a>
+	<a href="#">Archiwum</a>
 </div>
 
 

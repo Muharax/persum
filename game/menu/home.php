@@ -1,22 +1,31 @@
-<div class="sg-info">
-    <h2>Welcome in new system information</h2>
+<?php 
 
-    <p>Zostań z nami na dłużej</p>
-</div>
+require ('database/db.php');
 
-<hr />
+$query = 'SELECT * FROM `nowosci_home` ORDER BY `n_id` DESC LIMIT 5';
+$z=$db_PDO->prepare($query);
+$z->execute();
 
-<div class="sg-info">
-    <h1>Hello World!</h1>
-    <p>Welcone on New Web site about world system panitirnto</p>
-    Perum to portal dla ludzi, którzy kochają internet, lubią dzielić się wiedzą, chcą nauczyć się czegos nowego, są otwarci na świat a w szczególności chcą być poza system. Zapraszamy
+$ile = $z->rowCount();
 
-    <br />
-
-    <marquee style="color:yellow;">Site unser construction</marquee>
-
-    <p>Dodano <?php echo date('l');?></p>
+for ($i=0; $i < $ile; $i++){
+	$w = $z->fetch();
 	
-</div>
+	echo '
+		<div class="sg-info">
+			<h3>'.$w['n_temat'].'</h3>
+			
+			<hr>
+			
+			'.$w['n_tresc'].'
+			
+			<div class="post_stopka">
+			<div class="post_author">Dodano '.$w['n_data'].' przez '.$w['n_user'].'</div>
+			</div>
+		</div>
+	';
+	
+}
 
 
+?>

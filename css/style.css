@@ -29,6 +29,15 @@ body{
 	background-color: #213740;
 	font-family: monospace;
 }
+.post_stopka > div{
+	color:grey;
+}
+.sg-info{
+	background-color: #111d22;
+    padding: 20px;
+    border-radius: 5px;
+	margin-bottom:5px;
+}
 .rootDark{
 	background-color: #192930;
 	color:white;
@@ -221,11 +230,7 @@ input:checked + .slider:before {
 .centerRoot{
 	display:flex;
 }
-.sg-info{
-	background-color: #111d22;
-    padding: 20px;
-    border-radius: 5px;
-}
+
 .onas{
 	display:flex;
 }

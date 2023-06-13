@@ -44,10 +44,10 @@ defined('URL') or define('URL', $http.'://'.$_SERVER['SERVER_NAME']. "/$page_nam
 			<div class="passo">
 				<div>Płeć</div>
 				<label>
-				<div class="labelll">
-					<input type="radio" id="xc1" name="new_plec" value="Kobieta" >
-					<label for="xc1">Kobieta</label>
-				</div>
+					<div class="labelll">
+						<input type="radio" id="xc1" name="new_plec" value="Kobieta" >
+						<label for="xc1">Kobieta</label>
+					</div>
 				</label>
 				<label>
 				<div class="labelll">

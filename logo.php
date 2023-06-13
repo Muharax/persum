@@ -1,6 +1,6 @@
 <header class="logo-out">
 	<div class="logo-w1 p-2">
-		<a id="baseindex" href="<?php echo URL;?>index.php">
+		<a id="baseindex" href="<?php echo URL;?>">
 			<img id="BHH" src="<?php echo URL;?>img/skynet1.png">
 		</a>
 	</div>	
