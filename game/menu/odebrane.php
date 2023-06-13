@@ -1,7 +1,7 @@
 <?php
 
 if(!isset($_SESSION['id'])){
-    echo 'Brak dostępu, <a href="#">zaloguj</a> się aby sprawdzić wiadomośći.';
+    echo 'Brak dostępu, <a href="'.URL.'logowanie/zaloguj.php">zaloguj</a> się aby sprawdzić wiadomośći.';
     exit;
 }
 
