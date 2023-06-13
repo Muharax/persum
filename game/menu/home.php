@@ -29,13 +29,13 @@ while($res = $r->fetch(PDO::FETCH_ASSOC)):
 	<hr>
 	<?php echo $res['n_tresc'];?>
 </div>
+<?php endwhile;?>
+
+
 <?php
-endwhile;
-
-
 for ($page=1; $page <= $total_pages ; $page++):?>
 
-<a href='<?php echo "?page=$page"; ?>' class="links"><?php  echo $page; ?>
+<a class="pagina" href='<?php echo "?page=$page"; ?>' class="links"><?php echo $page; ?>
  </a>
 
 <?php endfor; ?>
