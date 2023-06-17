@@ -21,7 +21,7 @@
 		
 		
 <!------------------------------------------ Service Worker --------------------------------------------------->
-		<script type="text/javascript" src="<?php echo URL;?>sw-test/sw.js"></script>
+		<script type="text/javascript" src="<?php echo URL;?>sw.js"></script>
 		<link rel="manifest" href="<?php echo URL;?>manifest.json"/>
 		<link rel="apple-touch-icon" sizes="180x180" href="<?php echo URL;?>img/favicon.png" />
 
