@@ -1,5 +1,5 @@
 <?php  
-	include ('init.php');
+	require ('init.php');
 ?>
 	
 <!DOCTYPE HTML>
@@ -53,8 +53,6 @@
 $(document).on("click", '#add_T', function() {	
 	var id = $(this).val();
 	var token = $('#token-k').val();
-	// console.log(id);
-	// console.log(token);
 
 		$.ajax({
 			type: "POST",

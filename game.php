@@ -1,5 +1,43 @@
 <?php 
 
+function menu_zalogowany (){
+	if(isset($_SESSION['zalogowany'])){
+		if($_SESSION['uprawnienia'] === 1){
+			echo '<div><a class="mma" href="?link=home">Strona główna</a></div>
+					<hr>
+					<div><a class="mma" href="?link=zdjecia">Zdjęcia</a></div>
+					<div><a class="mma" href="?link=programowanie">Moje prace</a></div>
+					<div><a class="mma" href="?link=programowanie">Programowanie</a></div>
+					<hr>
+					<div><a class="mma" href="?link=poczekalnia">Poczekalnia</a></div>
+					<hr>
+					<div><a class="mma" href="?link=dodaj_material"> Dodaj matriał <i style="color:red;">Nowość</i></a></div>
+					<div><a class="mma" href="?link=katering">Opinia</a></div>
+					<hr>
+					<div><a class="mma" href="?link=odebrane">Wiadomości</a></div>
+					<div><a class="mma" href="?link=o-nas">o Nas</a></div>';
+			exit;
+		}
+		
+	}else{
+			echo '<div><a class="mma" href="?link=home">Strona główna</a></div>
+					<hr>
+					<div><a class="mma" href="?link=zdjecia">Zdjęcia</a></div>
+					<div><a class="mma" href="?link=programowanie">Programowanie</a></div>
+					<hr>
+					<div><a class="mma" href="?link=poczekalnia">Poczekalnia</a></div>
+					<hr>
+					<div><a class="mma" href="?link=dodaj_material"> Dodaj matriał <i style="color:red;">Nowość</i></a></div>
+					<div><a class="mma" href="?link=katering">Opinia</a></div>
+					<hr>
+					<div><a class="mma" href="?link=odebrane">Wiadomości</a></div>
+					<div><a class="mma" href="?link=o-nas">o Nas</a></div>';
+	}
+	
+}
+
+
+
 function zalogowany(){
 	if(isset($_SESSION['zalogowany'])){
 return '<div class="m1">
@@ -23,23 +61,12 @@ return '<div class="m1">
 <div class="main">
 
 	<?php echo zalogowany();?>
+	
 	<div class="centerRoot">
 		<div class="m2">
 
 			<div class="main_menu">
-				<div><a class="mma" href='?link=home'>Strona główna</a></div>
-				<hr>
-				<div><a class="mma" href='?link=memy'>Nowośći w branży</a></div>
-				<div><a class="mma" href='?link=programowanie'>Programowanie</a></div>
-				<div><a class="mma" href='?link=wiadomosci'>Wiadomośći</a></div>
-				<hr>
-				<div><a class="mma" href='?link=poczekalnia'>Poczekalnia</a></div>
-				<hr>
-				<div><a class="mma" href='?link=dodaj_material'> Dodaj matriał <i style="color:red;">Nowość</i></a></div>
-				<div><a class="mma" href='?link=katering'>Opinia</a></div>
-				<hr>
-				<div><a class="mma" href='?link=odebrane'>Wiadomości</a></div>
-				<div><a class="mma" href='?link=o-nas'>o Nas</a></div>
+				<?php menu_zalogowany();?>
 			</div>
 		</div>
 
@@ -54,7 +81,8 @@ return '<div class="m1">
 					$module = $_GET ['link'];
 					$moduleDIR = 'game/'.$module.'/'.$module . '.php';
 					if(!file_exists($moduleDIR)){
-						return 'Nie kombinuj';					
+						return 'Nie kombinuj';
+						exit;
 					}
 
 					switch($module){

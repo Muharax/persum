@@ -29,6 +29,15 @@ body{
 	background-color: #213740;
 	font-family: monospace;
 }
+
+.example-image{
+	border-radius:5px;
+	margin-bottom:5px;
+	object-fit: cover;
+}
+.example-image:hover{
+	scale: 1.05;
+}
 .post_stopka > div{
 	color:grey;
 }
