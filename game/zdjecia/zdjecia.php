@@ -49,31 +49,30 @@
 	  
 	   <a class="example-image-link" href="<?php echo $URL_PHOTOS."10.jpg";?>" data-lightbox="example-1">
 	  <img class="example-image" src="<?php echo $URL_PHOTOS_MIN."10.jpg";?>" alt="HUTA KATOWICE" width="200" height="200"/></a>
-	  
+</div>
+	
+	
+
+
+
+    <div title="HUTA KATOWICE">
+		<a class="example-image-link" href="<?php echo $URL_PHOTOS."11.jpg";?>" data-lightbox="example-1">
+		<img class="example-image" src="<?php echo $URL_PHOTOS_MIN."11.jpg";?>" alt="HUTA KATOWICE" width="200" height="200"/></a>
+		<a class="example-image-link" href="<?php echo $URL_PHOTOS."12.jpg";?>" data-lightbox="example-1" >
+		<img class="example-image" src="<?php echo $URL_PHOTOS_MIN."12.jpg";?>" alt="HUTA KATOWICE" width="200" height="200"/></a>
+		<a class="example-image-link" href="<?php echo $URL_PHOTOS."13.jpg";?>" data-lightbox="example-1" >
+		<img class="example-image" src="<?php echo $URL_PHOTOS_MIN."13.jpg";?>" alt="HUTA KATOWICE" width="200" height="200"/></a> 
+
+		<a class="example-image-link" href="<?php echo $URL_PHOTOS."14.jpg";?>" data-lightbox="example-1" >
+		<img class="example-image" src="<?php echo $URL_PHOTOS_MIN."14.jpg";?>" alt="HUTA KATOWICE" width="200" height="200"/></a>
+
+		<a class="example-image-link" href="<?php echo $URL_PHOTOS."15.jpg";?>" data-lightbox="example-1" >
+		<img class="example-image" src="<?php echo $URL_PHOTOS_MIN."15.jpg";?>" alt="HUTA KATOWICE" width="200" height="200"/></a>
     </div>
 	
 	
-<hr>
+	
 
-
-     <div title="HUTA KATOWICE">
-      <a class="example-image-link" href="<?php echo $URL_PHOTOS."11.jpg";?>" data-lightbox="example-1">
-	  <img class="example-image" src="<?php echo $URL_PHOTOS_MIN."11.jpg";?>" alt="HUTA KATOWICE" width="200" height="200"/></a>
-      <a class="example-image-link" href="<?php echo $URL_PHOTOS."12.jpg";?>" data-lightbox="example-1" >
-	  <img class="example-image" src="<?php echo $URL_PHOTOS_MIN."12.jpg";?>" alt="HUTA KATOWICE" width="200" height="200"/></a>
-	   <a class="example-image-link" href="<?php echo $URL_PHOTOS."13.jpg";?>" data-lightbox="example-1" >
-	  <img class="example-image" src="<?php echo $URL_PHOTOS_MIN."13.jpg";?>" alt="HUTA KATOWICE" width="200" height="200"/></a> 
-	  
-	  <a class="example-image-link" href="<?php echo $URL_PHOTOS."14.jpg";?>" data-lightbox="example-1" >
-	  <img class="example-image" src="<?php echo $URL_PHOTOS_MIN."14.jpg";?>" alt="HUTA KATOWICE" width="200" height="200"/></a>
-	  
-	  <a class="example-image-link" href="<?php echo $URL_PHOTOS."15.jpg";?>" data-lightbox="example-1" >
-	  <img class="example-image" src="<?php echo $URL_PHOTOS_MIN."15.jpg";?>" alt="HUTA KATOWICE" width="200" height="200"/></a>
-    </div>
-	
-	
-	
-	<hr>
 	
 	
 	

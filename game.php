@@ -31,6 +31,7 @@ function menu_zalogowany (){
 					<div><a class="mma" href="?link=katering">Opinia</a></div>
 					<hr>
 					<div><a class="mma" href="?link=odebrane">Wiadomości</a></div>
+					<div><a class="mma" href="?link=kontakt">Kontakt</a></div>
 					<div><a class="mma" href="?link=o-nas">o Nas</a></div>';
 	}
 	

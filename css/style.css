@@ -29,7 +29,12 @@ body{
 	background-color: #213740;
 	font-family: monospace;
 }
-
+.col-75 > select, textarea, input{
+	background-color: #213740;
+}
+.col-75 > input, select, textarea {
+	width: 100%;
+}
 .example-image{
 	border-radius:5px;
 	margin-bottom:5px;

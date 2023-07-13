@@ -50,7 +50,7 @@ defined('URL') or define('URL', $http.'://'.$_SERVER['SERVER_NAME']. "/$page_nam
 	</form>
 </div>
 
-<div class="reg"><a href="<?php echo URL;?>logowanie/rejestracja.php">Rejestracja</a></div>
+<!-- <div class="reg"><a href="<?php echo URL;?>logowanie/rejestracja.php">Rejestracja</a></div> -->
 
 
 	
